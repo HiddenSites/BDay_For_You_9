@@ -103,9 +103,9 @@ function handleMove(e) {
     if (!cardOpened) {
       cardOpened = true;
       allowDualBalloons = true;
-      updateBalloonInterval(1.5);
+      updateBalloonInterval(1.8);
       document.getElementById("balloonSlider").value = getSliderValueFromInterval(balloonInterval);
-      setInterval(spawnFallingFlower, 1000);
+      setInterval(spawnFallingFlower, 1500);
     }
   } else if (cardOpen && diffX > 50) {
     card.classList.remove("open");
@@ -133,7 +133,7 @@ const pastelColors = [
   "#FFE5B4", // Apricot (warmer peach replacement)
 ];
 
-let balloonInterval = 500; // default 0.5s in ms
+let balloonInterval = 1200; // default 0.5s in ms
 let timerA, timerB;
 let allowDualBalloons = false;
 
