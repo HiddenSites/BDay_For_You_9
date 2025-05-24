@@ -44,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
       popupModal.style.display = "none";
       cardWrapper.style.display = "flex";
       bgMusic.play();
-      for (let i = 0; i < 100; i++) {
-        spawnBalloon(false, false);
-      }
       document.getElementById("balloonSliderContainer").style.display = "block";
       document.getElementById("balloonSlider").value = getSliderValueFromInterval(balloonInterval);
       startBalloonTimers();
@@ -97,9 +94,6 @@ function handleMove(e) {
   if (!cardOpen && diffX < -50) {
     card.classList.add("open");
     cardOpen = true;
-    for (let i = 0; i < 30; i++) {
-        spawnBalloon(true);
-      }
     if (!cardOpened) {
       cardOpened = true;
       allowDualBalloons = true;
