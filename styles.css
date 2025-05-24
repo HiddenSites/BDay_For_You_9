@@ -153,12 +153,13 @@ body {
   max-width: 60px;
   max-height: 80px;
   border-radius: 50% 50% 45% 45%;
-  position: fixed;
-  top: -100px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100px);
   z-index: 10;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
   cursor: pointer;
+  will-change: transform, opacity;
 }
 
 .balloon::after {
